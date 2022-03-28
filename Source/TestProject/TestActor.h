@@ -27,17 +27,17 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	// Function callable from BP
-	UFUNCTION(BlueprintCallable)
-	void FunctionCallableFromBp();
+	//UFUNCTION(BlueprintCallable)
+	//void FunctionCallableFromBp();
 
-	UFUNCTION(BlueprintImplementableEvent)
-	void OnOverlap();
+	//UFUNCTION(BlueprintImplementableEvent)
+	//void OnOverlap();
 
 	UFUNCTION(BlueprintCallable)
 	void TestFunction();
 
 	UFUNCTION(BlueprintCallable, Meta = (AdvancedDisplay = "Distance"))
-	float JumpADistance(float Distance, FVector Direction, FVector& OutMoveDelta);
+float JumpADistance(float Distance, FVector Direction, FVector& OutMoveDelta);
 
 	void HandleOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 

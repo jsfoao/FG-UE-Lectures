@@ -6,6 +6,8 @@
 #include "Components/StaticMeshComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 
+#include "Projectile.h"
+
 // Sets default values
 ATestActor::ATestActor()
 {
@@ -43,7 +45,8 @@ void ATestActor::HandleOverlap(UPrimitiveComponent* OverlappedComponent, AActor*
 	{
 		ChaseTarget = Cast<APawn>(OtherActor);
 		IsOverlapping = true;
-		OnOverlap();
+		//AActor* actor = GetWorld()->SpawnActor<AProjectile>(GetActorLocation(), GetActorRotation());
+		//OnOverlap();
 	}
 }
 
@@ -51,7 +54,6 @@ void ATestActor::HandleOverlap(UPrimitiveComponent* OverlappedComponent, AActor*
 void ATestActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
